@@ -91,6 +91,9 @@ def read_file_adaptive_encoding(filename):
             # 如果GBK也失败，打印错误信息并返回None
             print(f"读取文件'{filename}'时，UTF-8和GBK编码均失败。")
             return None
+    except IOError as e:
+        print(f"读取文件'{filename}'时发生错误：{e}")
+        return None
 
 
 def zip_files(files, output):
