@@ -181,10 +181,10 @@ pip install py3comtrade
 ## 四、使用说明
 
 ```python
-from py3comtrade.comtrade import read_comtrade
+from py3comtrade.comtrade import Comtrade
 
 comtrade_file_path = 'comtrade_file_path'
-record = read_comtrade(comtrade_file_path)
+record = Comtrade(comtrade_file_path)
 station_name = record.fault_header.station_name
 ch_numbers = [1, 2, 3, 4]
 # 先获取模拟量通道对象
