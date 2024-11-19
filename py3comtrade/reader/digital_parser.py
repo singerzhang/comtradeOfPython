@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from py3comtrade.model.digital import Digital
-from py3comtrade.type.phase_code import PhaseCode
+from py3comtrade.model.type.phase_code import PhaseCode
 
 
 def digital_parser(line):

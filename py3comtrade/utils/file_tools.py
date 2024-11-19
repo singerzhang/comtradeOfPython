@@ -15,7 +15,7 @@ def file_finder(directory: str, extension: str, recursive: bool = False):
     """
     查找指定目录下所有指定后缀名的文件
     :param directory: 指定目录
-    :param extension: 指定后缀名,应以点号开头，如.cfg
+    :param extension: 指定后缀名,应以点号开头，如.reader
     :param recursive: 是否递归查找
     :return: 符合条件的文件列表
     """

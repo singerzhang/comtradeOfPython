@@ -1,30 +1,27 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from py3comtrade.entity.cfg import Cfg
-from py3comtrade.parser.analog_channel import generate_analog_channel_str
-from py3comtrade.parser.digital_channel import generate_digital_channel_str
-from py3comtrade.parser.fault_header import generate_fault_header_str
-from py3comtrade.parser.sample_info import generate_sample_info_str
+from py3comtrade.model.configure import Configure
 
 
-def generate_cfg_str(cfg_obj):
+def generate_cfg_str(cfg_obj: Configure):
     """
     生成cfg文件字符串
     @param cfg_obj: cfg对象
     @return: cfg文件字符串
     """
-    fault_headers_str = generate_fault_header_str(cfg_obj.fault_header) + '\n'
+    header = cfg_obj.header.__str__() + "\n"
+    channel_num = cfg_obj.channel_num.__str__() + "\n"
     analog_channels_str = ''
-    for ac in cfg_obj.analog_channels:
-        analog_channels_str += generate_analog_channel_str(ac) + '\n'
+    for ac in cfg_obj.analogs:
+        analog_channels_str += ac.__str__() + '\n'
     digital_channels_str = ''
-    for dc in cfg_obj.digital_channels:
-        digital_channels_str += generate_digital_channel_str(dc) + '\n'
-    sample_info_str = generate_sample_info_str(cfg_obj.sample_info) + '\n'
-    return fault_headers_str + analog_channels_str + digital_channels_str + sample_info_str
+    for dc in cfg_obj.digitals:
+        digital_channels_str += dc.__str__ + '\n'
+
+    return header + channel_num + analog_channels_str + digital_channels_str
 
 
-def cfg_to_file(cfg: Cfg, filename: str):
+def cfg_to_file(cfg: Configure, filename: str):
     """
     将cfg文件写入文件
     :param cfg: cfg文件对象

@@ -7,92 +7,127 @@
 # @Author  : 张松贵
 # @File    : comtrade.py
 # @IDE     : PyCharm
-from py3comtrade.entity.cfg import Cfg
-from py3comtrade.entity.comtrade import Comtrade as BaseComtrade
-from py3comtrade.entity.dat import Dat
-from py3comtrade.parser.cfg_parser import CfgParser
-from py3comtrade.parser.dat_parser import DatParser
-from py3comtrade.parser.dmf_parser import DmfParser
-from py3comtrade.utils import file_tools
+from typing import Union
+
+import numpy as np
+
+from py3comtrade.model.analog import Analog
+from py3comtrade.model.configure import Configure
+from py3comtrade.reader.comtrade_reader import ComtradeReader, ReadFileMode
+from py3comtrade.reader.data_reader import DataReader
 
 
-class Comtrade(BaseComtrade):
+class Comtrade:
     """
     comtrade文件解析类
     """
 
-    def __init__(self, _cfg_file_name: str, _dat_file_name: str = None, _dmf_file_name: str = None):
+    __configure: Configure = None
+    __data: DataReader = None
+
+    def __init__(self, _comtrade_file_name: str):
         """
         comtrade文件读取初始化
-        :param _cfg_file_name: cfg文件名带后缀名,
-        :param _dat_file_name: dat文件名带后缀名，当该文件为空时和cfg文件名相同，后缀大小写保持一致
-        :param _dmf_file_name: dmf文件名带后缀名，当该文件为空时和cfg文件名相同，后缀大小写保持一致
+        :param _comtrade_file_name: cfg文件名带后缀名
         """
-
-        self.clear()
-        self.__load_comtrade_file(_cfg_file_name, _dat_file_name)
-        self.__cfg: Cfg
-        self.__dat: Dat
-        super().__init__(self.__cfg, self.__dat)
+        self.__comtrade_file_name = _comtrade_file_name
 
     def clear(self):
+        """清除类内部的私有变量"""
+        self.__comtrade_file_name = ''
+        self.__configure.clear()
+        self.__data.clear()
+
+    def read(self, read_mode: ReadFileMode = ReadFileMode.CFG):
+        comtrade_reader = ComtradeReader(self.__comtrade_file_name, read_mode)
+        self.__configure = comtrade_reader.configure
+        self.__data = comtrade_reader.data
+
+    def get_raw_samples_by_index(self, index: int, start_point: int = 0, end_point: int = None) -> np.ndarray:
         """
-        清除类内部的私有变量
-        @return:
+        获取指定通道、指定采样点的原始采样值
+        :param index: 通道索引值
+        :param start_point: 采样点开始位置,
+        :param end_point: 采样点结束位置
+        :return: 原始采样值numpy数组
         """
-        self.__cfg = None
-        self.__dat = None
-        super().clear()
+        if not isinstance(index, int):
+            raise TypeError("模拟量通道索引值类型错误!!!")
+        if self.cfg.channel_num.analog_num < index < 0:
+            raise ValueError(f"模拟量通道索引值超出范围!!!")
+        end_point = self.cfg.sample.count - 1 if end_point is None else end_point
+        return self.dat.analog_value.T[index:index + 1, start_point:end_point + 1]
+
+    def get_instant_samples_by_analog(self, analog: Analog, start_point: int = 0, end_point: int = None,
+                                      cycle_num: float = None, mode: int = 1, primary: bool = False) -> np.ndarray:
+        """
+        获取指定通道、指定采样点的瞬时采样值
+        :param analog: 通道对象
+        :param start_point: 采样点开始位置,默认为0
+        :param end_point: 采样点结束位置,默认为None,代表全部采样点
+        :param cycle_num: 采样周期数,默认为None,代表全部采样周期
+        :param mode: 模式,默认为1,代表向后取值,0为前后取值,1为向前取值
+        :param primary: 是否输出主变比值,默认为False,代表输出变比值
+        :return: 瞬时值采样值numpy数组
+        """
+        start_point, end_point, _ = self.cfg.get_cursor_sample_range(start_point, end_point, cycle_num, mode)
+        # 获取原始值
+        values = self.get_raw_samples_by_index(analog.index, start_point, end_point)
+        values = values * analog.a + analog.b
+        if primary:
+            values = values if analog.ps == "P" else values * analog.ratio
+        else:
+            values = values / analog.ratio if analog.ps == "P" else values
+        return np.around(values, 3)
+
+    def get_instant_samples_by_analogs(self, analogs: list[Analog], start_point: int = 0, end_point: int = None,
+                                       cycle_num: float = None, mode: int = 1, primary: bool = False) -> np.ndarray:
+        """
+        获取指定通道列表、指定采样点的瞬时采样值
+        :param analogs: 通道对象列表
+        :param start_point: 采样点开始位置,默认为0
+        :param end_point: 采样点结束位置,默认为None,代表全部采样点
+        :param cycle_num: 采样周期数,默认为None,代表全部采样周期
+        :param mode: 模式,默认为1,代表向后取值,0为前后取值,1为向前取值
+        :param primary: 是否输出主变比值,默认为False,代表输出变比值
+        """
+        start_point, end_point, _ = self.cfg.get_cursor_sample_range(start_point, end_point, cycle_num, mode)
+        instant_samples = []
+        for analog in analogs:
+            values = self.get_raw_samples_by_index(analog.index, start_point, end_point)
+            values = values * analog.a + analog.b
+            if primary:
+                instant_samples.append(values if analog.ps == "P" else values * analog.ratio)
+            else:
+                instant_samples.append(values / analog.ratio if analog.ps == "P" else values)
+        return np.array(instant_samples)
+
+    def get_instant_samples_by_segment(self, segment_index, primary: bool = False,
+                                       analog: Union[Analog, list[Analog]] = None):
+        """
+        获取指定采样段、指定通道的瞬时采样值
+        :param segment_index: 分段索引
+        :param primary: 是否输出主变比值,默认为False,代表输出变比值
+        :param analog: 通道对象,默认为None,代表输出全部通道
+        :return: 瞬时值采样值numpy数组
+        """
+        segment = self.cfg.sample.nrates[segment_index]
+        if isinstance(analog, Analog):
+            return self.get_instant_samples_by_analog(analog, segment.start_point, segment.end_point, primary)
+        if isinstance(analog, list):
+            return self.get_instant_samples_by_analogs(analog, segment.start_point, segment.end_point, primary)
+        if analog is None:
+            return self.get_instant_samples_by_analogs(self.cfg.analogs, segment.start_point, segment.end_point,
+                                                       primary)
 
     @property
-    def cfg(self) -> Cfg:
-        return self.__cfg
+    def cfg(self):
+        return self.__configure
 
     @property
-    def dat(self) -> Dat:
-        return self.__dat
-
-    @cfg.setter
-    def cfg(self, value):
-        self.__cfg = value
-
-    @dat.setter
-    def dat(self, value):
-        self.__dat = value
-
-    def __load_comtrade_file(self, _cfg_file_name: str, _dat_file_name: str = None):
-        """
-        判断是否存在cfg和dat文件
-        :param _cfg_file_name: cfg文件名，不含后缀
-        :param _dat_file_name: dat文件名，不含后缀
-        """
-        # 判断cfg文件存在且不为空，进行解析CFG文件
-        if file_tools.verify_file_validity(_cfg_file_name):
-            self.__cfg = CfgParser(_cfg_file_name).cfg
-        # 当dat文件为空，则取cfg文件名，后缀名大小写和cfg一致
-        if _dat_file_name is None:
-            _name, _suffix = _cfg_file_name.rsplit('.', 1)
-            _dat_suffix = 'dat' if _suffix == 'cfg' else 'DAT'
-            _dat_file_name = _name + '.' + _dat_suffix
-        # 判断dat文件存在且不为空，进行解析DAT文件
-        if file_tools.verify_file_validity(_dat_file_name):
-            self.__dat = DatParser(_dat_file_name, self.__cfg.fault_header, self.__cfg.sample_info).dat
-
-    def _load_dmf_file(self, _dmf_file_name: str):
-        """
-        判断是否存在dmf文件
-        :param _dmf_file_name: dmf文件名，含后缀
-        """
-        if not file_tools.verify_file_validity(_dmf_file_name):
-            self.dmf = DmfParser(_dmf_file_name)
+    def dat(self):
+        return self.__data
 
 
 if __name__ == '__main__':
-    file = r'../tests/data/xtz.cfg'
-    ch_numbers = [1, 2, 3, 4]
-    record = Comtrade(file)
-    print(record.fault_header.station_name)
-    stl = record.get_sample_time_lists()
-    analog_channels = [record.cfg.get_analog_obj(i) for i in ch_numbers]
-    ssz = record.get_analog_ssz(analog_channels)
-    print(stl.shape)
+    pass

@@ -51,7 +51,7 @@ def main():
         return
     mc = MergeComtrade(directory)
     cfg = mc.merge_cfg_data()
-    cfg_to_file(cfg, dist_name + '.cfg')
+    cfg_to_file(cfg, dist_name + '.reader')
     dat = mc.merge_dat_data()
     write_dat_ascii(dat, dist_name + '.dat')
     print(f'{dist_name}文件生成成功！')
