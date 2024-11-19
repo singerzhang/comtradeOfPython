@@ -2,12 +2,12 @@
 # -*- coding: utf-8 -*-
 from typing import Union
 
-from py3comtrade.model.channel import Channel
-from py3comtrade.type.analog_enum import ElectricalUnit
-from py3comtrade.type.phase_code import PhaseCode
+from py3comtrade.model.base_channel import BaseChannel
+from py3comtrade.model.type.analog_enum import ElectricalUnit
+from py3comtrade.model.type.phase_code import PhaseCode
 
 
-class Analog(Channel):
+class Analog(BaseChannel):
     __unit: ElectricalUnit
     __a: float
     __b: float
@@ -21,7 +21,7 @@ class Analog(Channel):
 
     def __init__(
             self,
-            index: Union[int, str],
+            cfg_index: Union[int, str],
             name: str,
             phase: Union[PhaseCode, str] = PhaseCode.NO_PHASE,
             ccbm: str = "",
@@ -37,7 +37,7 @@ class Analog(Channel):
     ):
         """
         模拟量通道类
-        :param index: 模拟通道索引号，必选，数字，整数
+        :param cfg_index: 模拟通道索引号，必选，数字，整数
         :param name: 通道标识符，必选，字符串，最大长度128个字符
         :param phase: 通道相别标识，可选，字母、数字，最小0个字符，最大长度2个字符
         :param ccbm: 被监视的电路元件，可选，字母、数字，最小0个字符，最大长度64个字符
@@ -51,7 +51,7 @@ class Analog(Channel):
         :param secondary: 通道互感器变比二次系数，必选，实数，数字，最小长度1个字符，最大长度32个字符
         :param ps: 一次还是二次值标识,表明通道转换因子方程ax+b得到的值
         """
-        super().__init__(index, name, phase, ccbm)
+        super().__init__(cfg_index, name, phase, ccbm)
         self.__unit = unit
         self.__a = a if isinstance(a, float) else float(a)
         self.__b = b if isinstance(b, float) else float(b)

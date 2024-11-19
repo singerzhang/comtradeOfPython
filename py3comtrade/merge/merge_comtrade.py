@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import numpy as np
-
-from py3comtrade.comtrade import read_comtrade
 from py3comtrade.entity.cfg import Cfg
 from py3comtrade.parser.cfg_parser import CfgParser
+
+from py3comtrade.comtrade import read_comtrade
 from py3comtrade.utils.file_tools import file_finder
 
 
-def read_cfgs(directory: str, extension: str = '.cfg'):
+def read_cfgs(directory: str, extension: str = '.reader'):
     """
     读取指定目录下的cfg文件目录，并将文件实例化
     :return:cfg实例化对象的数组
@@ -18,7 +18,7 @@ def read_cfgs(directory: str, extension: str = '.cfg'):
     for cfg_file in cfg_files:
         item = {
             "file_name": cfg_file,
-            "cfg": CfgParser(cfg_file).cfg
+            "reader": CfgParser(cfg_file).cfg
         }
         cfgs.append(item)
     return cfgs
@@ -29,11 +29,11 @@ class MergeComtrade:
     合并comtrade文件
     """
 
-    def __init__(self, directory: str, extension: str = '.cfg'):
+    def __init__(self, directory: str, extension: str = '.reader'):
         """
         初始化类
         :param directory: comtrade文件所在目录
-        :param extension: comtrade文件扩展名，默认为.cfg
+        :param extension: comtrade文件扩展名，默认为.reader
         """
         self._cfgs = read_cfgs(directory, extension)
 
@@ -52,7 +52,7 @@ class MergeComtrade:
         merge_cfg: Cfg = None
         for idx, cfg in enumerate(self.cfgs):
             # 将要修改的通道信息传入通道修改类中
-            cfg = cfg.get('cfg')
+            cfg = cfg.get('reader')
             # 第一个文件返回cfg全部对象
             if idx == 0:
                 merge_cfg = cfg
@@ -84,7 +84,7 @@ class MergeComtrade:
             if idx == 0:
                 merge_ssz.append(samp_times)
             # 获取所有通道信息，后续通过界面获取
-            ssz = fr.get_analog_ssz(fr.analog_channels, primary=True)
+            ssz = fr.get_instant_samples_by_analog(fr.analog_channels, primary=True)
             merge_ssz.append(ssz)
         merge_ssz = np.concatenate(merge_ssz)
         return merge_ssz.T

@@ -2,35 +2,36 @@
 # -*- coding: utf-8 -*-
 from typing import Union
 
-from py3comtrade.type.phase_code import PhaseCode
+from py3comtrade.model.type.phase_code import PhaseCode
 
 
-class Channel:
+class BaseChannel:
     """
     通道基类
     """
 
     __index: int
+    __cfg_index: int
     __name: str
     __phase: PhaseCode
     __ccbm: str
 
     def __init__(
             self,
-            index: Union[int, str],
+            cfg_index: Union[int, str],
             name: str,
             phase: Union[PhaseCode, str] = PhaseCode.NO_PHASE,
             ccbm: str = "",
     ):
         """
         通道基类
-        :param index: 模拟通道索引号，必选，数字，整数
+        :param cfg_index: 模拟通道索引号，必选，数字，整数
         :param name: 通道标识符，必选，字符串，最大长度128个字符
         :param phase: 通道相别标识，可选，字母、数字，最小0个字符，最大长度2个字符
         :param ccbm: 被监视的电路元件，可选，字母、数字，最小0个字符，最大长度64个字符
         """
         self.clear()
-        self.__index = index if isinstance(index, int) else int(index)
+        self.__cfg_index = cfg_index if isinstance(cfg_index, int) else int(cfg_index)
         self.__name = name
         self.__phase = (
             phase if isinstance(phase, PhaseCode) else PhaseCode.from_string(phase)
@@ -38,13 +39,13 @@ class Channel:
         self.__ccbm = ccbm
 
     def clear(self) -> None:
-        self.__index = 0
+        self.__cfg_index = 0
         self.__name = ""
         self.__phase = PhaseCode.NO_PHASE
         self.__ccbm = ""
 
     def __str__(self):
-        return f"{self.index},{self.name},{self.phase},{self.ccbm}"
+        return f"{self.cfg_index},{self.name},{self.phase},{self.ccbm}"
 
     @property
     def index(self) -> int:
@@ -53,6 +54,14 @@ class Channel:
     @index.setter
     def index(self, value: int) -> None:
         self.__index = value
+
+    @property
+    def cfg_index(self) -> int:
+        return self.__cfg_index
+
+    @cfg_index.setter
+    def cfg_index(self, value: int) -> None:
+        self.__cfg_index = value
 
     @property
     def name(self) -> str:

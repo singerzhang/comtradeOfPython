@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*-
 import chardet
 
-from py3comtrade.cfg.analog_parser import analog_parser
-from py3comtrade.cfg.channel_num_parser import channel_num_parser
-from py3comtrade.cfg.digital_parser import digital_parser
-from py3comtrade.cfg.header_parser import header_parser
-from py3comtrade.cfg.nrates_parser import create_nrates, create_nrate
 from py3comtrade.model.configure import Configure
 from py3comtrade.model.precision_time import PrecisionTime
-from py3comtrade.type.data_file_type import DataFileType
+from py3comtrade.model.type.data_file_type import DataFileType
+from py3comtrade.reader.analog_parser import analog_parser
+from py3comtrade.reader.channel_num_parser import channel_num_parser
+from py3comtrade.reader.digital_parser import digital_parser
+from py3comtrade.reader.header_parser import header_parser
+from py3comtrade.reader.nrates_parser import create_nrates, create_nrate
 
 
 def detect_file_encoding(file_path):

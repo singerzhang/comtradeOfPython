@@ -1,0 +1,1201 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<FaultReport>
+<DeviceInfo>
+   <name>制造厂家</name>
+   <value>国电南自(SAC)</value>
+</DeviceInfo>
+<DeviceInfo>
+   <name>厂站名称</name>
+   <value>PSL600U保护</value>
+</DeviceInfo>
+<DeviceInfo>
+   <name>装置型号</name>
+   <value>PSL-603UA-G保护装置</value>
+</DeviceInfo>
+<DeviceInfo>
+   <name>程序版本</name>
+   <value>3.00</value>
+</DeviceInfo>
+<DeviceInfo>
+   <name>校验码</name>
+   <value>1BE0</value>
+</DeviceInfo>
+<DeviceInfo>
+   <name>程序形成时间</name>
+   <value>2014-04-23</value>
+</DeviceInfo>
+<DeviceInfo>
+   <name>网络地址1</name>
+   <value>192.168.169.51</value>
+</DeviceInfo>
+<DeviceInfo>
+   <name>网络地址2</name>
+   <value>172.30.20.234</value>
+</DeviceInfo>
+<DeviceInfo>
+   <name>网络地址3</name>
+   <value>192.168.0.123</value>
+</DeviceInfo>
+   <FaultStartTime>2015-09-17 10:52:53:065</FaultStartTime>
+<TripInfo>
+   <time>0ms</time>
+   <name>保护启动</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>9ms</time>
+   <name>分相差动动作</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>9ms</time>
+   <name>保护永跳出口</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>45ms</time>
+   <name>分相差动动作</name>
+   <value>0</value>
+</TripInfo>
+<TripInfo>
+   <time>45ms</time>
+   <name>保护永跳出口</name>
+   <value>0</value>
+</TripInfo>
+<TripInfo>
+   <time>72ms</time>
+   <name>故障参数</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>3504ms</time>
+   <name>分相差动动作</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>3504ms</time>
+   <name>保护永跳出口</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>3540ms</time>
+   <name>分相差动动作</name>
+   <value>0</value>
+</TripInfo>
+<TripInfo>
+   <time>3540ms</time>
+   <name>保护永跳出口</name>
+   <value>0</value>
+</TripInfo>
+<TripInfo>
+   <time>6887ms</time>
+   <name>分相差动动作</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>6887ms</time>
+   <name>保护永跳出口</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>6923ms</time>
+   <name>分相差动动作</name>
+   <value>0</value>
+</TripInfo>
+<TripInfo>
+   <time>6923ms</time>
+   <name>保护永跳出口</name>
+   <value>0</value>
+</TripInfo>
+<TripInfo>
+   <time>6930ms</time>
+   <name>分相差动动作</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>6930ms</time>
+   <name>保护永跳出口</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>6978ms</time>
+   <name>零序差动动作</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>7068ms</time>
+   <name>分相差动动作</name>
+   <value>0</value>
+</TripInfo>
+<TripInfo>
+   <time>7068ms</time>
+   <name>零序差动动作</name>
+   <value>0</value>
+</TripInfo>
+<TripInfo>
+   <time>7068ms</time>
+   <name>保护永跳出口</name>
+   <value>0</value>
+</TripInfo>
+<TripInfo>
+   <time>7155ms</time>
+   <name>分相差动动作</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>7155ms</time>
+   <name>保护永跳出口</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>7203ms</time>
+   <name>分相差动动作</name>
+   <value>0</value>
+</TripInfo>
+<TripInfo>
+   <time>7203ms</time>
+   <name>保护永跳出口</name>
+   <value>0</value>
+</TripInfo>
+<TripInfo>
+   <time>10013ms</time>
+   <name>分相差动动作</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>10013ms</time>
+   <name>保护永跳出口</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>10198ms</time>
+   <name>分相差动动作</name>
+   <value>0</value>
+</TripInfo>
+<TripInfo>
+   <time>10198ms</time>
+   <name>保护永跳出口</name>
+   <value>0</value>
+</TripInfo>
+<TripInfo>
+   <time>10320ms</time>
+   <name>分相差动动作</name>
+   <value>1</value>
+</TripInfo>
+<TripInfo>
+   <time>10320ms</time>
+   <name>保护永跳出口</name>
+   <value>1</value>
+</TripInfo>
+   <DataFileSize>596166</DataFileSize>
+   <FaultKeepingTime>10198ms</FaultKeepingTime>
+<DigitalStatus>
+   <name>纵联差动保护</name>
+   <value>1</value>
+</DigitalStatus>
+<DigitalStatus>
+   <name>光纤通道一</name>
+   <value>1</value>
+</DigitalStatus>
+<DigitalStatus>
+   <name>光纤通道二</name>
+   <value>1</value>
+</DigitalStatus>
+<DigitalStatus>
+   <name>距离保护</name>
+   <value>1</value>
+</DigitalStatus>
+<DigitalStatus>
+   <name>零序过流保护</name>
+   <value>1</value>
+</DigitalStatus>
+<DigitalStatus>
+   <name>远方跳闸保护</name>
+   <value>1</value>
+</DigitalStatus>
+<DigitalStatus>
+   <name>过电压保护</name>
+   <value>1</value>
+</DigitalStatus>
+<DigitalStatus>
+   <name>闭锁重合闸</name>
+   <value>0</value>
+</DigitalStatus>
+<DigitalStatus>
+   <name>停用重合闸</name>
+   <value>0</value>
+</DigitalStatus>
+<DigitalStatus>
+   <name>合闸压力闭锁</name>
+   <value>0</value>
+</DigitalStatus>
+<DigitalStatus>
+   <name>A相跳闸位置</name>
+   <value>0</value>
+</DigitalStatus>
+<DigitalStatus>
+   <name>B相跳闸位置</name>
+   <value>0</value>
+</DigitalStatus>
+<DigitalStatus>
+   <name>C相跳闸位置</name>
+   <value>0</value>
+</DigitalStatus>
+<DigitalStatus>
+   <name>其它保护动作</name>
+   <value>0</value>
+</DigitalStatus>
+<DigitalStatus>
+   <name>远传1开入</name>
+   <value>0</value>
+</DigitalStatus>
+<DigitalStatus>
+   <name>远传2开入</name>
+   <value>0</value>
+</DigitalStatus>
+<DigitalEvent>
+   <name>从CPU启动</name>
+   <time>7ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>9ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>9ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>9ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>9ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>46ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>46ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>46ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>46ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>3503ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>3503ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>3503ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>3503ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>3539ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>3539ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>3539ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>3539ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>6885ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>6885ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>6885ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>6885ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>6921ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>6921ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>6921ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>6921ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>6928ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>6928ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>6928ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>6928ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>7066ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>7066ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>7066ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>7066ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>7153ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>7153ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>7153ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>7153ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>7201ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>7201ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>7201ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>7201ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>10010ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>10010ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>10010ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>10010ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>10195ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>10195ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>10195ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>10195ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>10317ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>10317ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>10317ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>10317ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>10353ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>10353ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>10353ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>10353ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>10457ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>10457ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>10457ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>10457ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>10493ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>10493ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>10493ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>10493ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>10930ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>10930ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>10930ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>10930ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>10966ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>10966ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>10966ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>10966ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>10988ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>10988ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>10988ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>10988ms</time>
+   <value>1</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>A跳出口</name>
+   <time>11025ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>B跳出口</name>
+   <time>11025ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>C跳出口</name>
+   <time>11025ms</time>
+   <value>0</value>
+</DigitalEvent>
+<DigitalEvent>
+   <name>永跳动作</name>
+   <time>11025ms</time>
+   <value>0</value>
+</DigitalEvent>
+<SettingValue>
+   <name>定值区号</name>
+   <value>1</value>
+</SettingValue>
+<SettingValue>
+   <name>被保护设备</name>
+   <value>PSL600U保护</value>
+</SettingValue>
+<SettingValue>
+   <name>CT一次额定值</name>
+   <value>4000.000</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>CT二次额定值</name>
+   <value>1.000</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>PT一次额定值</name>
+   <value>500.000</value>
+   <unit>kV</unit>
+</SettingValue>
+<SettingValue>
+   <name>通道一类型</name>
+   <value>专用光纤</value>
+</SettingValue>
+<SettingValue>
+   <name>通道二类型</name>
+   <value>专用光纤</value>
+</SettingValue>
+<SettingValue>
+   <name>变化量启动电流定值</name>
+   <value>0.100</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>零序启动电流定值</name>
+   <value>0.100</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>差动动作电流定值</name>
+   <value>0.220</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>线路正序容抗定值</name>
+   <value>4442.000</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>线路零序容抗定值</name>
+   <value>6000.000</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>本侧电抗器阻抗定值</name>
+   <value>1.000</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>本侧小电抗器阻抗定值</name>
+   <value>1.000</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>本侧识别码</name>
+   <value>18180</value>
+</SettingValue>
+<SettingValue>
+   <name>对侧识别码</name>
+   <value>18189</value>
+</SettingValue>
+<SettingValue>
+   <name>线路正序阻抗定值</name>
+   <value>7.840</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>线路正序灵敏角</name>
+   <value>85.000</value>
+   <unit>°</unit>
+</SettingValue>
+<SettingValue>
+   <name>线路零序阻抗定值</name>
+   <value>20.430</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>线路零序灵敏角</name>
+   <value>85.000</value>
+   <unit>°</unit>
+</SettingValue>
+<SettingValue>
+   <name>线路总长度</name>
+   <value>34.660</value>
+   <unit>km</unit>
+</SettingValue>
+<SettingValue>
+   <name>接地距离Ⅰ段定值</name>
+   <value>5.900</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>接地距离Ⅱ段定值</name>
+   <value>16.000</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>接地距离Ⅱ段时间</name>
+   <value>1.000</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>接地距离Ⅲ段定值</name>
+   <value>28.000</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>接地距离Ⅲ段时间</name>
+   <value>3.500</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>相间距离Ⅰ段定值</name>
+   <value>5.900</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>相间距离Ⅱ段定值</name>
+   <value>18.000</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>相间距离Ⅱ段时间</name>
+   <value>1.000</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>相间距离Ⅲ段定值</name>
+   <value>34.000</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>相间距离Ⅲ段时间</name>
+   <value>3.500</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>负荷限制电阻定值</name>
+   <value>40.000</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>零序过流Ⅱ段定值</name>
+   <value>0.400</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>零序过流Ⅱ段时间</name>
+   <value>1.000</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>零序过流Ⅲ段定值</name>
+   <value>0.100</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>零序过流Ⅲ段时间</name>
+   <value>6.000</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>零序过流加速段定值</name>
+   <value>0.200</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>单相重合闸时间</name>
+   <value>1.000</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>三相重合闸时间</name>
+   <value>1.000</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>同期合闸角</name>
+   <value>40.000</value>
+   <unit>°</unit>
+</SettingValue>
+<SettingValue>
+   <name>CT断线后分相差动定值</name>
+   <value>0.700</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>快速距离阻抗定值</name>
+   <value>5.900</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>零序电抗补偿系数KX</name>
+   <value>0.530</value>
+</SettingValue>
+<SettingValue>
+   <name>零序电阻补偿系数KR</name>
+   <value>0.530</value>
+</SettingValue>
+<SettingValue>
+   <name>振荡闭锁过流</name>
+   <value>0.700</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>对侧电抗器阻抗定值</name>
+   <value>1.000</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>对侧小电抗器阻抗定值</name>
+   <value>1.000</value>
+   <unit>Ω</unit>
+</SettingValue>
+<SettingValue>
+   <name>零序反时限电流定值</name>
+   <value>2.500</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>零序反时限时间</name>
+   <value>10.000</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>零序反时限配合时间</name>
+   <value>10.000</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>零序反时限最小时间</name>
+   <value>10.000</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>不一致零负序电流定值</name>
+   <value>2.500</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>三相不一致保护时间</name>
+   <value>10.000</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>过负荷告警电流定值</name>
+   <value>100.000</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>过负荷告警时间</name>
+   <value>3600.000</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>过负荷跳闸电流定值</name>
+   <value>100.000</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>过负荷跳闸时间</name>
+   <value>3600.000</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>负序电流定值</name>
+   <value>2.500</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>零序电压定值</name>
+   <value>57.700</value>
+   <unit>V</unit>
+</SettingValue>
+<SettingValue>
+   <name>负序电压定值</name>
+   <value>57.700</value>
+   <unit>V</unit>
+</SettingValue>
+<SettingValue>
+   <name>低电流定值</name>
+   <value>0.050</value>
+   <unit>A</unit>
+</SettingValue>
+<SettingValue>
+   <name>低有功功率</name>
+   <value>0.000</value>
+   <unit>W</unit>
+</SettingValue>
+<SettingValue>
+   <name>低功率因数角</name>
+   <value>60.000</value>
+   <unit>°</unit>
+</SettingValue>
+<SettingValue>
+   <name>远跳经故障判据时间</name>
+   <value>0.500</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>远跳不经故障判据时间</name>
+   <value>1.000</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>过电压定值</name>
+   <value>100.000</value>
+   <unit>V</unit>
+</SettingValue>
+<SettingValue>
+   <name>过电压保护动作时间</name>
+   <value>10.000</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>电流变化量展宽定值</name>
+   <value>1.000</value>
+   <unit>s</unit>
+</SettingValue>
+<SettingValue>
+   <name>纵联差动保护</name>
+   <value>1-投入</value>
+</SettingValue>
+<SettingValue>
+   <name>CT断线闭锁差动</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>通道一通信内时钟</name>
+   <value>1-内时钟</value>
+</SettingValue>
+<SettingValue>
+   <name>通道二通信内时钟</name>
+   <value>1-内时钟</value>
+</SettingValue>
+<SettingValue>
+   <name>电压取线路PT电压</name>
+   <value>1-线路</value>
+</SettingValue>
+<SettingValue>
+   <name>振荡闭锁元件</name>
+   <value>1-投入</value>
+</SettingValue>
+<SettingValue>
+   <name>距离保护Ⅰ段</name>
+   <value>1-投入</value>
+</SettingValue>
+<SettingValue>
+   <name>距离保护Ⅱ段</name>
+   <value>1-投入</value>
+</SettingValue>
+<SettingValue>
+   <name>距离保护Ⅲ段</name>
+   <value>1-投入</value>
+</SettingValue>
+<SettingValue>
+   <name>零序电流保护</name>
+   <value>1-投入</value>
+</SettingValue>
+<SettingValue>
+   <name>零序过流Ⅲ段经方向</name>
+   <value>1-投入</value>
+</SettingValue>
+<SettingValue>
+   <name>三相跳闸方式</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>Ⅱ段保护闭锁重合闸</name>
+   <value>1-投入</value>
+</SettingValue>
+<SettingValue>
+   <name>多相故障闭锁重合闸</name>
+   <value>1-投入</value>
+</SettingValue>
+<SettingValue>
+   <name>重合闸检同期方式</name>
+   <value>1-投入</value>
+</SettingValue>
+<SettingValue>
+   <name>重合闸检无压方式</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>单相重合闸</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>三相重合闸</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>禁止重合闸</name>
+   <value>1-投入</value>
+</SettingValue>
+<SettingValue>
+   <name>停用重合闸</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>单相TWJ启动重合闸</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>三相TWJ启动重合闸</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>电流补偿</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>远跳受启动元件控制</name>
+   <value>1-投入</value>
+</SettingValue>
+<SettingValue>
+   <name>快速距离保护</name>
+   <value>1-投入</value>
+</SettingValue>
+<SettingValue>
+   <name>零序加速段带方向</name>
+   <value>1-投入</value>
+</SettingValue>
+<SettingValue>
+   <name>零序反时限</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>零序反时限带方向</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>三相不一致保护</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>不一致经零负序电流</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>过负荷告警</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>过负荷跳闸</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>冲击性负荷</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>故障电流电压启动</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>低电流低有功启动</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>低功率因数角启动</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>远方跳闸不经故障判据</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>过电压保护跳本侧</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>过电压远跳经跳位闭锁</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>过电压三取一方式</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>PT断线转无判据</name>
+   <value>0-退出</value>
+</SettingValue>
+<SettingValue>
+   <name>纵联差动保护</name>
+   <value>1</value>
+</SettingValue>
+<SettingValue>
+   <name>光纤通道一</name>
+   <value>1</value>
+</SettingValue>
+<SettingValue>
+   <name>光纤通道二</name>
+   <value>0</value>
+</SettingValue>
+<SettingValue>
+   <name>距离保护</name>
+   <value>0</value>
+</SettingValue>
+<SettingValue>
+   <name>零序过流保护</name>
+   <value>0</value>
+</SettingValue>
+<SettingValue>
+   <name>停用重合闸</name>
+   <value>0</value>
+</SettingValue>
+<SettingValue>
+   <name>远方跳闸保护</name>
+   <value>0</value>
+</SettingValue>
+<SettingValue>
+   <name>过电压保护</name>
+   <value>0</value>
+</SettingValue>
+<SettingValue>
+   <name>远方投退压板软压板</name>
+   <value>1</value>
+</SettingValue>
+<SettingValue>
+   <name>远方切换定值区软压板</name>
+   <value>1</value>
+</SettingValue>
+<SettingValue>
+   <name>远方修改定值软压板</name>
+   <value>1</value>
+</SettingValue>
+</FaultReport>

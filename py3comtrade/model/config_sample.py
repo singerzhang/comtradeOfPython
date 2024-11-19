@@ -10,7 +10,7 @@ from typing import Union
 
 from py3comtrade.model.channel_num import ChannelNum
 from py3comtrade.model.nrate import Nrate
-from py3comtrade.type.data_file_type import DataFileType
+from py3comtrade.model.type.data_file_type import DataFileType
 
 
 class ConfigSample:
