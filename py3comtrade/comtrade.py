@@ -11,6 +11,7 @@ from typing import Union
 
 import numpy as np
 
+from py3comtrade.computation.calcius import Calcius
 from py3comtrade.model.analog import Analog
 from py3comtrade.model.configure import Configure
 from py3comtrade.reader.comtrade_reader import ComtradeReader, ReadFileMode
@@ -119,6 +120,11 @@ class Comtrade:
         if analog is None:
             return self.get_instant_samples_by_analogs(self.cfg.analogs, segment.start_point, segment.end_point,
                                                        primary)
+
+    def calc_channel_data(self, analog: Analog, site_point: int = 0, cycle_num: float = None, mode: int = 1) -> Calcius:
+        vs = self.get_instant_samples_by_analog(analog, start_point=site_point, cycle_num=cycle_num, mode=mode)
+        calcius = Calcius(vs[0])
+        return calcius
 
     @property
     def cfg(self):
