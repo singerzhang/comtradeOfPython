@@ -6,7 +6,7 @@ from py3comtrade.computation.fourier import dft_rx
 from py3comtrade.utils import math_polar_rect
 
 
-class Calcius:
+class Calcium:
     __instants: np.ndarray  # 瞬时值数组
     __instant: float  # 当前采样位置的瞬时值
     __phasor: complex  # 相量值
@@ -28,6 +28,7 @@ class Calcius:
         self.__instants = None
         self.__phasor = complex(0.0, 0.0)
         self.__angle = 0.0
+        self.__effective = 0.0
 
     def calc_angle(self, phasor: complex):
         self.angle = math_polar_rect.complex_to_polar(phasor)[1]
